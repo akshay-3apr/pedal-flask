@@ -76,7 +76,6 @@ bikerental
 │   ├── userDB.py # user database logic  
 │   └── utility.py # utility to return json file based on role to render UI dynnamically  
 ├── bikerental.py  
-├── bikerental_venv  
 ├── logs  
 │   ├── bikerental.log  
 ├── migrations  
@@ -90,7 +89,3 @@ bikerental
 # Hosted URL
 The project is hosted on Heroku, please find the below link to access the webiste:
 [https://pedal-flask.herokuapp.com/login](https://pedal-flask.herokuapp.com/login)
-
-# Gitlab URL
-The project GitLab URl:
-[https://stgit.dcs.gla.ac.uk/2684995a/pedal](https://stgit.dcs.gla.ac.uk/2684995a/pedal)
