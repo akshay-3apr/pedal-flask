@@ -1,6 +1,5 @@
 .DS_Store
 app/.DS_Store
 __pycache__
-Procfile
 bikerental_venv
 
