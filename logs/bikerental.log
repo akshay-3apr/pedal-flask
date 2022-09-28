@@ -1,0 +1,107 @@
+2021-11-03 22:21:38,009 ERROR: Exception on /customer/endtrip [POST] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 198, in endtrip
+    current_latlong = Bike_Location.query.filter_by(previous_location=currentTrip.end_location).first().previous_location_latlong
+AttributeError: 'NoneType' object has no attribute 'previous_location_latlong'
+2021-11-03 22:23:23,960 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-03 22:27:57,360 ERROR: Exception on /customer/endtrip [POST] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 198, in endtrip
+    current_latlong = Bike_Location.query.filter_by(previous_location=currentTrip.end_location).first().previous_location_latlong
+AttributeError: 'NoneType' object has no attribute 'previous_location_latlong'
+2021-11-03 22:36:40,459 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-03 23:11:50,145 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-04 00:19:30,308 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-04 01:12:40,254 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-04 09:16:47,846 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-04 09:22:45,349 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-04 09:23:06,875 ERROR: An error occurred while adding data to table: Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 692, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: users.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/akshayprakash/Documents/bikerental/app/dbOperations.py", line 14, in add
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1423, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3241, in flush
+    self._flush(objects)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3381, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3341, in _flush
+    flush_context.execute()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 453, in execute
+    rec.execute(self)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 627, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1219, in _emit_insert_statements
+    result = connection._execute_20(
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1520, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 313, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1389, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1748, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1929, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 692, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users.username
+[SQL: INSERT INTO users (username, firstname, lastname, email, phonenumber, address, created_at, password_hash, role) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Manager', 'Manager', 'User', 'manager@gmail1.com', '7654345678', 'Firhill, Glasgow', '2021-11-04 09:23:06.847781', 'pbkdf2:sha256:150000$gMJkKmex$56b32aacbe70087425863f2f64a97a9c60b756fdab320ac1a39fed02aeea7063', 'MANAGER')]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+ [in /Users/akshayprakash/Documents/bikerental/app/dbOperations.py:17]
+2021-11-04 11:02:33,455 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-04 12:47:41,556 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-04 12:53:07,187 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-04 12:55:12,146 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]

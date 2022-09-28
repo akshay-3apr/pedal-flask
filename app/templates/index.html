@@ -1,0 +1,15 @@
+{% extends "body.html" %} {% block content %}
+<div class="row justify-content-between">
+    <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">Hello, {{current_user.username}}</h1>
+            </div>
+            <div class="panel-body">
+                <h3>landing page for: {{current_user.role}}</h3>
+                <h4>Pedal to a better future</h4>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

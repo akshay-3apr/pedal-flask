@@ -1,0 +1,108 @@
+2021-11-02 13:38:09,581 ERROR: Exception on /customer/rides [POST] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 96, in getRideList
+    return render_template('user/customer_dash.html', title='Customer', sideBarItems=sideBarItems, navBarItems=navBarItems, form=SearchRideForm(), table=fetchBikeTable(location))
+  File "/Users/akshayprakash/Documents/bikerental/app/bikeTable.py", line 26, in fetchBikeTable
+    booked = Booking.query.filter_by(bike_id="BIKE-"+bike.Bike_Location,booking_status="BOOKED").count() == 0
+AttributeError: 'Bike_Location' object has no attribute 'Bike_Location'
+2021-11-02 13:39:09,591 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 13:39:29,206 ERROR: Exception on /customer/rides [POST] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 96, in getRideList
+    return render_template('user/customer_dash.html', title='Customer', sideBarItems=sideBarItems, navBarItems=navBarItems, form=SearchRideForm(), table=fetchBikeTable(location))
+  File "/Users/akshayprakash/Documents/bikerental/app/bikeTable.py", line 27, in fetchBikeTable
+    markedForRepair = Bike_Status.query.filter(Bike_Status.bike_Serial_no == bike.bike_id,Bike_Status.defective_status == False).count() > 0
+AttributeError: 'Bike_Location' object has no attribute 'bike_id'
+2021-11-02 13:39:58,383 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 13:40:40,535 ERROR: Exception on /customer/report/defective [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 167, in defectiveBikes
+    return render_template('user/report_defective.html', title="Bikes", sideBarItems=sideBarItems, navBarItems=navBarItems, table=fetchBikeTable())
+TypeError: fetchBikeTable() missing 1 required positional argument: 'location'
+2021-11-02 13:52:18,194 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 13:52:26,810 ERROR: Exception on /customer/report/defective [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 167, in defectiveBikes
+    return render_template('user/report_defective.html', title="Bikes", sideBarItems=sideBarItems, navBarItems=navBarItems, table=fetchDefectiveBiketable())
+  File "/Users/akshayprakash/Documents/bikerental/app/defective_bike.py", line 27, in fetchDefectiveBiketable
+    booked = Booking.query.filter_by(bike_id="BIKE-"+bike.bike_id,booking_status="BOOKED").count() == 0
+TypeError: can only concatenate str (not "int") to str
+2021-11-02 13:53:19,536 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 13:53:22,643 ERROR: Exception on /customer/report/defective [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 167, in defectiveBikes
+    return render_template('user/report_defective.html', title="Bikes", sideBarItems=sideBarItems, navBarItems=navBarItems, table=fetchDefectiveBiketable())
+  File "/Users/akshayprakash/Documents/bikerental/app/defective_bike.py", line 32, in fetchDefectiveBiketable
+    bikeList.append(DefectiveBike(count,"BIKE-"+str(bike.bike_id),bike_loc.current_location))
+AttributeError: 'BaseQuery' object has no attribute 'current_location'
+2021-11-02 13:53:52,706 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]

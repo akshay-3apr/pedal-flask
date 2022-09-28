@@ -1,0 +1,114 @@
+2021-11-02 20:12:38,053 ERROR: Exception on /api/bike/manager/charts/data [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/Documents/bikerental/app/api/bike.py", line 34, in fetch_bike_chart_data
+    'x':[customer(0) for customer in booking_info],
+  File "/Users/akshayprakash/Documents/bikerental/app/api/bike.py", line 34, in <listcomp>
+    'x':[customer(0) for customer in booking_info],
+TypeError: 'Row' object is not callable
+2021-11-02 20:16:31,018 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 20:19:48,144 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 20:21:06,839 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 20:28:25,878 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 20:31:02,706 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 20:31:22,616 ERROR: Exception on /api/bike/manager/charts/data [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/Documents/bikerental/app/api/bike.py", line 34, in fetch_bike_chart_data
+    'x':[booking[0] for booking in booking_info],
+NameError: name 'booking_info' is not defined
+2021-11-02 20:31:24,815 ERROR: Exception on /api/bike/manager/charts/data [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/Documents/bikerental/app/api/bike.py", line 34, in fetch_bike_chart_data
+    'x':[booking[0] for booking in booking_info],
+NameError: name 'booking_info' is not defined
+2021-11-02 20:33:36,172 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 20:51:12,417 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 20:56:01,102 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 20:57:13,275 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 20:59:26,510 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 21:02:49,912 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 21:04:48,776 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 21:06:51,249 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 21:21:51,368 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 21:52:44,494 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 22:17:19,778 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 22:21:33,822 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 22:25:56,911 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 22:53:11,368 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 22:54:22,395 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 22:58:37,398 ERROR: Exception on /api/bike/markerlist [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/Documents/bikerental/app/api/bike.py", line 15, in get_bike_markerlist
+    bikeList[bike.current_location]['count'] += 1
+KeyError: 'University of Glasgow'
+2021-11-02 22:58:51,891 ERROR: Exception on /api/bike/markerlist [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/Documents/bikerental/app/api/bike.py", line 15, in get_bike_markerlist
+    bikeList[bike.current_location]['count'] += 1
+KeyError: 'University of Glasgow'
+2021-11-02 23:00:52,242 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 23:03:07,455 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 23:05:08,927 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 23:13:16,920 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-03 21:21:37,384 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-03 21:46:19,896 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-03 22:09:39,666 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]

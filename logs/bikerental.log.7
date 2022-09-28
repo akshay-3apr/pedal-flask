@@ -1,0 +1,119 @@
+2021-11-02 14:11:52,154 ERROR: Exception on /operator/repair/BIKE-2 [POST] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 303, in repairDefectiveBikes
+    bike = Bike_repair.query.filter(Bike_repair.bike_id==bike_id).last()
+AttributeError: 'BaseQuery' object has no attribute 'last'
+2021-11-02 14:13:55,542 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 14:29:13,814 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 14:34:06,370 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 14:37:44,065 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 14:42:08,319 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 14:44:58,820 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 14:48:52,216 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 14:53:53,618 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 14:58:02,524 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 15:03:42,489 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 15:09:55,103 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 15:12:42,457 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 15:17:30,296 ERROR: Exception on /operator/managecycles [POST] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 267, in manageCycles
+    bikes = bikeDB.fetchWithCondition(Bike_Location.current_location,endlocation)
+  File "/Users/akshayprakash/Documents/bikerental/app/bikeDB.py", line 78, in fetchWithCondition
+    obj = self.dbOperations.query(objectid=value).fetchall()
+AttributeError: 'DBOperations' object has no attribute 'query'
+2021-11-02 15:20:57,675 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 15:22:39,845 ERROR: Exception on /operator/managecycles [POST] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 267, in manageCycles
+    bikes = bikeDB.fetchWithCondition(Bike_Location.current_location,endlocation)
+  File "/Users/akshayprakash/Documents/bikerental/app/bikeDB.py", line 78, in fetchWithCondition
+    obj = self.dbOperations.db_cusQuery.filter(objectid=value).fetchall()
+AttributeError: 'function' object has no attribute 'filter'
+2021-11-02 15:23:14,134 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 15:25:12,921 ERROR: Exception on /operator/managecycles [POST] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 267, in manageCycles
+    bikes = bikeDB.fetchWithCondition(Bike_Location.current_location,endlocation)
+  File "/Users/akshayprakash/Documents/bikerental/app/bikeDB.py", line 78, in fetchWithCondition
+    obj = self.dbOperations.db_cusQuery().filter(objectid=value).fetchall()
+AttributeError: 'function' object has no attribute 'filter'
+2021-11-02 15:27:31,640 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 15:28:53,400 ERROR: Exception on /operator/managecycles [POST] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 267, in manageCycles
+    bikes = bikeDB.fetchWithCondition(Bike_Location.current_location,endlocation)
+  File "/Users/akshayprakash/Documents/bikerental/app/bikeDB.py", line 78, in fetchWithCondition
+    obj = self.dbOperations.db_cusQuery().filter(objectid=value).fetchall()
+AttributeError: 'function' object has no attribute 'filter'
+2021-11-02 15:37:31,897 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]

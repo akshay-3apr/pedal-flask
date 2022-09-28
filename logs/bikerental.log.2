@@ -1,0 +1,110 @@
+2021-11-02 18:48:26,000 ERROR: Exception on /customer/endtrip [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 187, in endtrip
+    currentTrip.end_location = Bike_Availability.query.filter_by(id=form.pickupLocation.data).first().location
+AttributeError: 'NoneType' object has no attribute 'location'
+2021-11-02 18:50:31,303 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 18:51:31,307 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 18:51:42,116 ERROR: Exception on /customer/endtrip [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 185, in endtrip
+    previousTrip.total_time = round((((currentTrip.end_date - currentTrip.start_date).total_seconds() / 60.0)/60.0),2)
+UnboundLocalError: local variable 'currentTrip' referenced before assignment
+2021-11-02 18:52:14,886 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 18:52:24,025 ERROR: Exception on /customer/endtrip [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 190, in endtrip
+    currentTrip.end_location = Bike_Availability.query.filter_by(id=form.pickupLocation.data).first().location
+AttributeError: 'NoneType' object has no attribute 'location'
+2021-11-02 18:56:05,968 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 18:56:36,584 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 18:57:47,630 ERROR: Exception on /customer/paymentconfirmation [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 159, in paymentconfirmation
+    bikeDB.updateBooking(current_user.username, Config.PRICE)
+  File "/Users/akshayprakash/Documents/bikerental/app/bikeDB.py", line 69, in updateBooking
+    booking.status="FINISHED"
+AttributeError: 'NoneType' object has no attribute 'status'
+2021-11-02 18:59:08,496 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 18:59:21,445 ERROR: Exception on /customer/paymentconfirmation [GET] [in /Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/akshayprakash/opt/anaconda3/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/akshayprakash/Documents/bikerental/app/routes.py", line 159, in paymentconfirmation
+    bikeDB.updateBooking(current_user.username, Config.PRICE)
+  File "/Users/akshayprakash/Documents/bikerental/app/bikeDB.py", line 69, in updateBooking
+    booking.status="FINISHED"
+AttributeError: 'NoneType' object has no attribute 'status'
+2021-11-02 19:01:34,814 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 19:04:14,255 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 19:05:38,933 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 19:07:47,711 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]
+2021-11-02 20:12:32,578 INFO: PEDAL startup [in /Users/akshayprakash/Documents/bikerental/app/__init__.py:47]

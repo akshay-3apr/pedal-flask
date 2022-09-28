@@ -1,0 +1,82 @@
+{%extends 'dash.html'%}
+{%block content%}
+{% for message in messages %}
+<div class="alert {% if message.status %} alert-success {% else %} alert-danger {% endif %}" role="alert">
+    <p>{{message.msg}}</p>
+</div>
+{% endfor %}
+<div class="row">
+    <div class="col">
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <div class="card-body p-md-5 text-black">
+                <h3 class="mb-5 text-uppercase">Load Operator Form</h3>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            {{ form.firstname(size=32,class="form-control form-control-lg",placeholder="First Name",autofocus="true") }}
+                            {{ form.firstname.label(class="form-label")}}
+                            {% for error in form.firstname.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            {{ form.lastname(size=32,class="form-control form-control-lg",placeholder="Last Name",autofocus="true") }}
+                            {{ form.lastname.label(class="form-label")}}
+                            {% for error in form.lastname.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                    {{ form.email(size=32,class="form-control form-control-lg",placeholder="Email Address",autofocus="true") }}
+                    {{ form.email.label(class="form-label")}}
+                    {% for error in form.email.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                    {{ form.phonenumber.label(class="form-label")}}
+                    {{ form.phonenumber(size=32,class="form-control form-control-lg",placeholder="Phone Number",autofocus="true") }}
+                    {% for error in form.phonenumber.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+
+                </div>
+
+                <div class="form-outline mb-4">
+                    {{ form.address(size=32,class="form-control form-control-lg",placeholder="Address",autofocus="true") }}
+                    {{ form.address.label(class="form-label")}}
+                    {% for error in form.address.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+
+                </div>
+
+                <div class="form-outline mb-4">
+                    {{ form.username(size=32,class="form-control form-control-lg",placeholder="Username",autofocus="true") }}
+                    {{ form.username.label(class="form-label")}}
+                    {% for error in form.username.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+                <div class="form-outline mb-4">
+                    {{ form.password(size=32,class="form-control form-control-lg",placeholder="Password",autofocus="true") }}
+                    {{ form.password.label(class="form-label")}}
+                    {% for error in form.password.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+                <div class="d-flex justify-content-end pt-3 cus-flex-signup">
+                    {{ form.submit(class='btn btn-primary btn-lg ms-2') }}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{%endblock%}

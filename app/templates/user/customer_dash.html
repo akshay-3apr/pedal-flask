@@ -1,0 +1,35 @@
+{%extends 'dash.html'%}
+{%block content%}
+<div class="row">
+    <div class="col">
+        <div id='mapid'></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <h1>Book Cycles: </h1>
+        <form action="{{ url_for('getRideList') }}" method="post">
+            {{ form.hidden_tag() }}
+            <div class="input-group mb-3">
+                {{ form.pickupLocation(size=32,class="form-control form-control-lg",placeholder="PickUp Location",autofocus="true",id="locationsearch") }}
+                {% for error in form.pickupLocation.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+                {{ form.pickupLocationHidden(size=32,id="hiddenLocation") }}
+                <div class="input-group-append">
+                    {{ form.submit(class='btn btn-primary btn-lg ms-2') }}
+                </div>
+            </div>
+        </form>
+        {% if table %}
+        <div class="row justify-content-between">
+            <div class="col">
+                <div class="panel panel-default">
+                    {{table}}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{%endblock%}

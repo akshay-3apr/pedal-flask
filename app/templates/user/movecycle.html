@@ -1,0 +1,80 @@
+{%extends 'dash.html'%}
+{%block content%}
+<div class="row">
+    <div class="col">
+        {% if message%}
+        <div class="alert {% if message.status %} alert-success {% else %} alert-danger {% endif %}" role="alert">
+            <p>{{message.msg}}</p>
+        </div>
+        {% endif %}
+        <h1>Add or Move cycles to destination</h1>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <label for="start-location" class="form-label">Adding to location</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">Start Locations</span>
+                {{ form.startlocation(size=32,class="form-control",placeholder="Start Location",id="start-location",autofocus="true") }}
+                {% for error in form.startlocation.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <label for="start-location" class="form-label">Removing from location</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">End Locations</span>
+                {{ form.endlocation(size=32,class="form-control",placeholder="End Location",id="end-location") }}
+                {% for error in form.endlocation.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Start Locations: Latitude and Longitude</span>
+                {{ form.startlatitude(size=32,class="form-control",placeholder="Latitude",id="latitude") }}
+                {% for error in form.startlatitude.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+                {{ form.startlongitude(size=32,class="form-control",placeholder="Longitude",id="longitude") }}
+                {% for error in form.startlongitude.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">End Locations: Latitude and Longitude</span>
+                {{ form.endlatitude(size=32,class="form-control",placeholder="Latitude",id="latitude") }}
+                {% for error in form.endlatitude.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+                {{ form.endlongitude(size=32,class="form-control",placeholder="Longitude",id="longitude") }}
+                {% for error in form.endlongitude.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Count</span>
+                {{ form.count(size=32,class="form-control",placeholder="Count of Cycles",id="cycleCount") }}
+                {% for error in form.count.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">Bike Brand</span>
+                {{ form.bikebrand(size=32,class="form-control",placeholder="Bike Brand",id="bikebrand") }}
+                {% for error in form.bikebrand.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Price</span>
+                {{ form.bikeprice(size=32,class="form-control",placeholder="Price of Cycles",id="cycleCount") }}
+                {% for error in form.bikeprice.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+                <span class="input-group-text">.00</span>
+            </div>
+            {{ form.submit(class='btn btn-primary') }}
+        </form>
+    </div>
+</div>
+<div class="row">
+    {{table}}
+</div>
+{%endblock%}
